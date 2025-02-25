@@ -1,0 +1,35 @@
+.paypalButton, .flutterwaveButton {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.paypalButton {
+    background-color: #2790C3 !important;
+    border: none;
+    color: white !important;   
+}
+
+.flutterwaveButton {
+    background-color: #f89500;
+    border: none;
+    color: white;   
+}
+
+.paypalButton:hover {
+    background-color: #27346A !important;
+}
+
+.flutterwaveButton:hover {
+    background-color: #FF5805 !important;
+    color: white;   
+}
+
+.flutterwaveButton:hover:active {
+    background-color: #FF5805 !important;
+    color: white;   
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

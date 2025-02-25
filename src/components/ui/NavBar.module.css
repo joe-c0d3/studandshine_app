@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+.cinzel_decorative_bold {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+.cinzel_decorative_regular {
+font-family: "Cinzel", serif;
+font-weight: 400;
+font-style: normal;
+line-height: .5;
+font-size: 15px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.custom_link {
+    text-decoration: none;
+}
+
+.custom_link:hover {
+    color: #3A6B35 !important;
+}
+
+
+.custom_link:active {
+    color: #3A6B35 !important;
+}
+
+
+@media (max-width: 1000px) {
+    .responsiveCart {
+        margin-top: 20px;
+    }    
+}
+
+
+    .stickyNavbar {
+        position: sticky !important;
+        top: 0;
+        z-index: 1030; /* Ensure it stays above other elements */
+}
