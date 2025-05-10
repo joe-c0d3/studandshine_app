@@ -23,7 +23,7 @@ const NavBar = ({numCartItems}) => {
                         style={{width: '80px', maxWidth: '100%', height: 'auto'}}
                     />
                     <span className={`${styles.title} col`}>
-                        <small className= {`${styles.cinzel_decorative_bold}`}>STUD AND SHINE</small>
+                        <small className= {`${styles.cinzel_decorative_bold}`}>STUD & SHINE</small>
                         <small className= {`${styles.cinzel_decorative_regular}`}>ACCESSORIES</small>
                     </span>
                 </Link>

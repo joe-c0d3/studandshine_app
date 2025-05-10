@@ -24,8 +24,8 @@ const HomePage = () => {
     setLoading(true)
     api.get("products")
     .then(res => {
-      console.log(res.data)
-      setProducts(res.data)
+      console.log(res.data.results)
+      setProducts(res.data.results)
       setLoading(false)
       setError("")
     })

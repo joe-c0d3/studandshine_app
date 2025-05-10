@@ -13,6 +13,8 @@ const ProductPage = ({setNumberCartItems}) => {
     const { slug } = useParams()
     const [product, setProduct] = useState({})
     const [similarProducts, setSimilarProducts] = useState([])
+    const [similarProductsNext, setSimilarProductsNext] = useState([])
+    const [similarProductsPrev, setSimilarProductsPrev] = useState([])
     const [inCart, setInCart] = useState(false)
     const [loading, setLoading] = useState(false)
     const cart_code = localStorage.getItem("cart_code")
@@ -55,8 +57,10 @@ const ProductPage = ({setNumberCartItems}) => {
         api.get(`product_detail/${slug}`)
         .then(res => {
             console.log(res.data)
-            setProduct(res.data)
-            setSimilarProducts(res.data.similar_products)
+            setProduct(res.data.results.product)
+            setSimilarProducts(res.data.results.similar_products)
+            setSimilarProductsNext(res.data.next)
+            setSimilarProductsPrev(res.data.previous)
             setLoading(false)
         })
         .catch(err => {
@@ -86,12 +90,7 @@ const ProductPage = ({setNumberCartItems}) => {
                         <div className="fs-5 mb-5">
                             <span>{`N${product.price}`}</span>
                         </div>
-                        <p className="lead">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Labore reprehenderit aliquam nemo, quidem, distinctio totam provident numquam, 
-                            vel est impedit dolore delectus sit. Facere repellendus assumenda praesentium blanditiis 
-                            voluptatem unde.
-                        </p>
+                        <p className="lead">{product.description}</p>
                         <div className="d-flex">
                             <button
                                 className="btn btn-outline-dark flex-shrink-0"
@@ -108,7 +107,7 @@ const ProductPage = ({setNumberCartItems}) => {
                 </div>
             </div>
         </section>
-        <RelatedProducts products={similarProducts} />
+        <RelatedProducts similar_products={similarProducts} next={similarProductsNext} prev={similarProductsPrev} />
     </div>
   )
 }

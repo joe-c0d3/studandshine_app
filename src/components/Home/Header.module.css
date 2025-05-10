@@ -6,3 +6,15 @@
     background-color: #FFFFFF !important;
     color: #3A6B35;
 }
+
+.btn_custom {
+    background-color: #000 !important; /* Black background */
+    color: #fff !important; /* White text */
+    border: none !important; /* No border */
+    width: 100%; /* Full width */
+    transition: opacity 0.3s ease !important; /* Smooth transition for hover effect */
+  }
+  
+  .btn_custom:hover {
+    opacity: 0.8 !important; /* Slight transparency on hover */
+  }

@@ -133,8 +133,8 @@ export function AuthProvider({children}){
         }
     }
 
-    const createNewPassword = async (new_password, confirm_password) => {
-        const response = await fetch(`http://127.0.0.1:8001/reset_password/<str:token>/`, {
+    const createNewPassword = async (new_password, confirm_password, token) => {
+        const response = await fetch(`http://127.0.0.1:8001/reset_password/${token}/`, {
             method: "POST",
             headers: {
                 "Content-Type":"application/json",

@@ -1,6 +1,7 @@
 import "./ForgotPasswordPage.module.css"
 import { Link } from "react-router-dom"
 import { useContext, useState } from "react"
+import { useParams } from 'react-router-dom';
 import api from "../../api"
 import Error from "../ui/Error"
 import { replace, useLocation, useNavigate } from "react-router-dom"
@@ -13,6 +14,7 @@ const ForgotPasswordResponsePage = () => {
 
     const location = useLocation()
     const navigate = useNavigate()
+    const {token} = useParams();
 
 
     const [new_password, setNewPassword] = useState("")
@@ -26,7 +28,7 @@ const ForgotPasswordResponsePage = () => {
     function handleSubmit(e) {
         e.preventDefault()
         setLoading(true)
-        createNewPassword(new_password, confirm_password)
+        createNewPassword(new_password, confirm_password, token)
         setLoading(false)
 
         const from = location?.state?.from.pathname || "/login";

@@ -21,6 +21,7 @@ import ForgotPasswordResponsePage from './components/user/ForgotPasswordResponse
 import PasswordResetPage from './components/ui/PasswordResetPage'
 
 import PaymentStatusPage from './components/payment/PaymentStatusPage'
+import CardContainer from './components/Home/CardContainer'
 
 
 const App = () => {

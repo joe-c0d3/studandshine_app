@@ -1,0 +1,56 @@
+.facebook_button {
+    color: #000 !important;
+    transition: color 300ms ease-in-out !important;
+    padding: 10px;
+}
+
+.facebook_button:hover {
+    color: #1877F2 !important;
+}
+
+.twitter_button {
+    color: #000 !important;
+    transition: color 300ms ease-in-out !important;
+    padding: 10px;
+}
+
+.twitter_button:hover {
+    color: #60A5FA !important;
+}
+
+.instagram_button {
+    color: #000 !important;
+    transition: color 300ms ease-in-out !important;
+    padding: 10px;
+}
+
+.instagram_button:hover {
+    color: #DB2777 !important;
+}
+
+.home_button {
+    color: #000 !important;
+    transition: color 300ms ease-in-out !important;
+}
+
+.home_button:hover {
+    font-weight: 600 !important;
+}
+
+.about_button {
+    color: #000 !important;
+    transition: color 300ms ease-in-out !important;
+}
+
+.about_button:hover {
+    font-weight: 600 !important;
+}
+
+.contact_button {
+    color: #000 !important;
+    transition: color 300ms ease-in-out !important;
+}
+
+.contact_button:hover {
+    font-weight: 600 !important;
+}

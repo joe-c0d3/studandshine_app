@@ -11,8 +11,6 @@ const NotFoundPage = () => {
                 <p className="lead fw-normal text-white-75 mb-4">Kindly check your spam folder if you can't find it.</p>
                 <Link to="/login" className={`${styles.pill_button} btn btn-light btn-lg rounded-pill px-4 py-2`}>Back to Login</Link>
             </div>
-
-
         </div>
     </header>
   )

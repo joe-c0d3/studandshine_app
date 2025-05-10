@@ -5,6 +5,7 @@ import api from "../../api"
 import Error from "../ui/Error"
 import { replace, useLocation, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../context/AuthContext"
+import styles from "../Home/Header.module.css"
 
 
 const LoginPage = () => {
@@ -72,7 +73,7 @@ const LoginPage = () => {
                            placeholder="Enter your password" required/>
                 </div>
 
-                <button type="submit" className="btn btn-primary w-100" disabled={loading}>Login</button>
+                <button type="submit" className={`${styles.btn_custom} btn btn-primary w-100`} disabled={loading}>Login</button>
             </form>
 
             <br />
