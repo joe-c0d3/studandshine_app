@@ -1,6 +1,7 @@
 import HomeCard from "./HomeCard"
 import React, { useState, useEffect } from 'react';
 import api from "../../api"
+import { BASE_URL } from "../../api";
 import PlaceHolderContainer from "../ui/PlaceHolderContainer"
 import styles from "./Header.module.css"
 
@@ -95,7 +96,7 @@ const CardContainer = ({products}) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://127.0.0.1:8001/products/")
+    fetch(`${BASE_URL}/products/`)
       .then((response) => response.json())
       .then((data) => {
         setDisplayedProducts(data.results || []);
