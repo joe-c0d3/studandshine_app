@@ -1,6 +1,7 @@
 import HomeCard from "./HomeCard"
 import React, { useState, useEffect } from 'react';
 import api from "../../api"
+import { BASE_URL } from "../../api";
 import PlaceHolderContainer from "../ui/PlaceHolderContainer"
 import styles from "./Header.module.css"
 
