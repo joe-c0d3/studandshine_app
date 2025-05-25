@@ -95,7 +95,7 @@ const CardContainer = ({products}) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://127.0.0.1:8001/products/")
+    fetch(`${BASE_URL}/products/`)
       .then((response) => response.json())
       .then((data) => {
         setDisplayedProducts(data.results || []);
