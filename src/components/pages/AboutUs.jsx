@@ -52,10 +52,13 @@ const AboutUs = () => {
       <div className={styles.right}>
         <h2 className='display-5 fw-bolder'>ABOUT US</h2>
         <p>
-          Mandepudi Gopi Chakradhar, better known as Gopi, discovered his passion for technology and coding during his school days in Khammam.
+        We help you elevate your style with exqusite jewels that speak volume
         </p>
         <p>
-          He pursued Computer Science at IIITDM Kurnool, enhancing skills in full-stack development, machine learning, and practical projects.
+        With over 1,000 satisfied client with positive review
+        </p>
+        <p>
+        RC : 2008794
         </p>
         <Link to="/contact_us" className={styles.cta}>Contact Us</Link>
       </div>
