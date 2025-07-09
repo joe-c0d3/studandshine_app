@@ -22,6 +22,12 @@ import PasswordResetPage from './components/ui/PasswordResetPage'
 
 import PaymentStatusPage from './components/payment/PaymentStatusPage'
 import CardContainer from './components/Home/CardContainer'
+import InvoicePage from './components/payment/InvoicePage'
+import InvoicePaidPage from './components/payment/InvoicePaidPage'
+import InvoiceCancelledPage from './components/payment/InvoiceCancelledPage'
+import AboutUs from './components/pages/AboutUs'
+import ContactUs from './components/pages/ContactUs'
+
 
 
 const App = () => {
@@ -62,6 +68,8 @@ const App = () => {
       } />
       <Route path="register" element={<RegisterPage />} />
       <Route path="login" element={<LoginPage />} />
+      <Route path="about_us" element={<AboutUs />} />
+      <Route path="contact_us" element={<ContactUs />} />
       <Route path="change_password" element={<ChangePasswordPage />} />
       <Route path="forgot_password" element={<ForgotPasswordPage />} />
       <Route path="reset_password/:token" element={<ForgotPasswordResponsePage />} />
@@ -69,6 +77,9 @@ const App = () => {
       <Route path="edit_profile" element={<UserEditPage />} />
       <Route path="*" element={<NotFoundPage />} />
       <Route path="confirmation_email_sent" element={<PasswordResetPage />} />
+      <Route path="invoice_page/:invoice_ref" element={<InvoicePage />} />
+      <Route path="completed_page/" element={<InvoicePaidPage />} />
+      <Route path="cancelled_page/" element={<InvoiceCancelledPage/>} />
       <Route path="payment-status" element={<PaymentStatusPage setNumberCartItems={setNumberCartItems} />} />
       </Route>
     </Routes>

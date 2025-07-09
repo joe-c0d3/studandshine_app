@@ -1,0 +1,8 @@
+.pill_button {
+    background-color: #CBD18F !important;
+}
+
+.pill_button:hover {
+    background-color: #FFFFFF !important;
+    color: #3A6B35;
+}

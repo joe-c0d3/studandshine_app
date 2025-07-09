@@ -8,6 +8,7 @@ const PaymentSection = () => {
   const [loading, setLoading] = useState(false)
   
   function makePayment() {
+    setLoading(true)
     api.post("initiate_payment/", {cart_code})
     .then(res => {
         console.log(res.data)
@@ -36,6 +37,19 @@ const PaymentSection = () => {
     })
   }
 
+  function generateInvoice() {
+    setLoading(true)
+    api.post("generate_invoice/", {cart_code})
+    .then(res => {
+        console.log(res.data);
+        window.location.href = res.data.invoice_link; // Use the link from the JSON response
+    })
+
+    .catch(err => {
+        console.log(err.message);
+    })
+    }
+
   return (
     <div className="col-md-4">
     <div className={`card ${styles.card}`}>
@@ -44,13 +58,18 @@ const PaymentSection = () => {
         </div>
         <div className="card-body">
             {/* PayPal Button */}
-            <button className={`btn btn-primary w-100 mb-3 ${styles.paypalButton}`} onClick={makePaypalPayment} id="paypal-button">
-                <i className="bi bi-paypal"></i>Pay with PayPal
+            <button className={`btn btn-primary w-100 mb-3 ${styles.paypalButton}`} disabled onClick={makePaypalPayment} id="paypal-button">
+                <i className="bi bi-paypal"></i>Pay with PayPal<sub>Coming soon!</sub>
             </button>
 
             {/* Flutterwave Button */}
-            <button className={`btn btn-warning w-100 mb-3 ${styles.flutterwaveButton}`} disabled={loading} onClick={makePayment} id="flutterwave-button">
-                <i className="bi bi-credit-card"></i>Pay with Flutterwave
+            <button className={`btn btn-warning w-100 mb-3 ${styles.flutterwaveButton}`} disabled onClick={makePayment} id="flutterwave-button">
+                <i className="bi bi-credit-card"></i>Pay with Flutterwave<sub>Coming soon!</sub>
+            </button>
+
+            {/* Direct Transfer Button */}
+            <button className={`btn btn-warning w-100 mb-3 ${styles.transferButton}`} onClick={generateInvoice} id="transfer-button">
+                <i className="bi bi-credit-card"></i>Direct Transfer
             </button>
             
 

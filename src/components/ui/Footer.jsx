@@ -14,8 +14,8 @@ const Footer = () => {
           {/* Quick Links Section */}
           <div className="mb-2">
                 <Link to="/" className={`text-black text-decoration-none mx-2 ${styles.home_button}`}>Home</Link>
-                <Link to="" className={`text-black text-decoration-none mx-2 ${styles.about_button}`}>About</Link>
-                <Link to="" className={`text-black text-decoration-none mx-2 ${styles.contact_button}`}>Contact</Link>
+                <Link to="about_us" className={`text-black text-decoration-none mx-2 ${styles.about_button}`}>About</Link>
+                <Link to="contact_us" className={`text-black text-decoration-none mx-2 ${styles.contact_button}`}>Contact</Link>
           </div>
 
           {/* Social Media Icons Section */}

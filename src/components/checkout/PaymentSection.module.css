@@ -1,4 +1,4 @@
-.paypalButton, .flutterwaveButton {
+.paypalButton, .flutterwaveButton, .transferButton {
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -15,6 +15,12 @@
     color: white;   
 }
 
+.transferButton {
+    background-color: #3a6b35;
+    border: none;
+    color: white;   
+}
+
 .paypalButton:hover {
     background-color: #27346A !important;
 }
@@ -24,9 +30,10 @@
     color: white;   
 }
 
-.flutterwaveButton:hover:active {
-    background-color: #FF5805 !important;
-    color: white;   
+.transferButton:hover {
+    background-color: white !important;
+    color: #3a6b35;
+    border: solid 1px #3a6b35;
 }
 
 .card {
